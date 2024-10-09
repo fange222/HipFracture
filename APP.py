@@ -37,10 +37,6 @@ feature_values = feature_values_continuous + feature_values_categorical
 # Create a DataFrame
 features_df = pd.DataFrame([feature_values], columns=feature_names_continuous + feature_names_categorical)
 
-# 检查特征名称是否匹配
-st.write(f"Model expected feature names: {model.feature_names_in_}")
-st.write(f"Input DataFrame feature names: {features_df.columns.tolist()}")
-
 # 手动设置列名以匹配模型期望的特征名称
 features_df.columns = model.feature_names_in_
 
@@ -70,3 +66,4 @@ if st.button("Predict"):
         )
 
     st.write(advice)
+
