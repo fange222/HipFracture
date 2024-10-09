@@ -13,7 +13,6 @@ feature_names_categorical = ["Age", "ASA", "Dementia", "Stroke", "AS", "Bloodtra
 st.title("Survival Prediction")
 
 # Continuous variable inputs
-st.header("Continuous Variables")
 bun = st.number_input("BUN (Blood Urea Nitrogen):", min_value=0.0, max_value=50.0, value=20.0)
 hct = st.number_input("HCT (Hematocrit):", min_value=0.0, max_value=50.0, value=30.0)
 ast = st.number_input("AST (Aspartate Aminotransferase):", min_value=0.0, max_value=200.0, value=40.0)
@@ -21,7 +20,6 @@ fib = st.number_input("FIB (Fibrinogen):", min_value=0.0, max_value=10.0, value=
 ca = st.number_input("Ca (Calcium):", min_value=0.0, max_value=5.0, value=2.5)
 
 # Categorical variable inputs
-st.header("Categorical Variables")
 age = st.selectbox("Age:", options=[1, 2], format_func=lambda x: "<80" if x == 1 else "≥80")
 asa = st.selectbox("ASA Grading:", options=[1, 2, 3], format_func=lambda x: "II" if x == 1 else ("III" if x == 2 else "IV"))
 dementia = st.selectbox("Dementia:", options=[0, 1], format_func=lambda x: "No" if x == 0 else "Yes")
